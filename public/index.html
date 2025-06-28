@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">
+
+
+    <title>Neura-assistente v-Beta</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="mobileMenu">
+                <div class="linha1"></div>
+                <div class="linha2"></div>
+                <div class="linha3"></div>
+            </div>
+            <ul class="navlist">
+                <li><a href="#">INTRODUÇÃO</a></li>
+                <li><a href="#">DASHBOARD</a></li>
+                <li><a href="#">APRESENTAÇÃO</a></li>
+                <li><a href="#">FITURES</a></li>
+            </ul>
+            <div class="icon-profile"><i class="bi bi-balloon-heart"></i></div>
+        </nav>
+    </header>
+    <main>
+        <div class="search">
+            <div class="search-wrapper">
+                <input class="search-input" type="text" placeholder="Pesquisar...">
+            </div>
+            <div class="icon-search"><i class="bi bi-search"></i></div>
+             <h2 class="titile-list">Lista de Tarefas</h2>
+        </div>
+        <div class="container">
+            <!-- <div class="card">
+                <div class="card-idStatus">
+                    <div class="id">ID: 1</div>
+                    <span class="tag">ANDAMENTO</span>
+                </div>
+                <div class="card-top">
+                    <h3 class="title">Estudar JavaScript</h3>
+                </div>
+                <p class="descricao">Focar em arrow functions e promises.</p>
+                <div class="date">Agendado para: 2025-06-20 14:00</div>
+                <div class="card-bottom">
+                    <button class="edit-button"><i class="bi bi-pencil"></i></button>
+                    <button class="delete-button"><i class="bi bi-trash3"></i></button>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="nav-left">
+                <i class="bi bi-house"></i>
+            </div>
+
+            <div class="add-task-wrapper">
+                <button id="btnSaveTasks" class="add-task" data-bs-toggle="modal" data-bs-target="#modalTarefa">
+                    <i class="bi bi-plus"></i>
+                </button>
+            </div>
+
+            <div class="nav-right">
+                <i class="bi bi-gear"></i>
+            </div>
+        </div>
+    </main>
+
+    <!-- modal de adicionar -->
+    <!-- Modal Bootstrap -->
+    <div class="modal fade" id="modalTarefa" tabindex="-1" aria-labelledby="modalTarefaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTarefaLabel">Nova Tarefa</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formTarefa">
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="titulo" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="descricao" class="form-label">Descrição</label>
+                            <textarea class="form-control" id="descricao" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="agendar" class="form-label">Agendar para</label>
+                            <input type="datetime-local" class="form-control" id="agendar">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-select" id="status">
+                                <option value="pendente">Pendente</option>
+                                <option value="andamento">Em andamento</option>
+                                <option value="concluido">Concluído</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button data-mode="" id="modalBtn" type="button" class="btn btn-success">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS Bundle com Popper (necessário para modais e outros componentes funcionarem) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <script  src="/main.js"></script>
+</body>
+
+</html>

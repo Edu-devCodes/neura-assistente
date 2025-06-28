@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "titulo": "Fazer um daployzinho sexta",
+    "descricao": "sexta-feira tentar fazer um deploy",
+    "agendarPara": "2025-06-27T20:30",
+    "status": "pendente"
+  }
+]

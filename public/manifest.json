@@ -1,0 +1,20 @@
+{
+    "name": "Neura assistente",
+    "short_name": "Neura",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#6C63FF",
+    "icons": [
+        {
+            "src": "/icons/neura-icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/neura-icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
